@@ -1,9 +1,13 @@
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: red;
     background-color: red;
+    width: 50vh;
+}
+
+.App {
 }
 
 .top-bar {
@@ -11,6 +15,7 @@ body {
     color: white;
     padding: 15px;
     text-align: center;
+    width: 365.5%;
 }
 
 .title {

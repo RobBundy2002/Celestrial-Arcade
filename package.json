@@ -10,7 +10,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "domain-browser": "^5.6.0",
     "react": "^18.2.0",
+    "react-chessboardjs": "^0.5.3",
     "react-dom": "^18.2.0"
   },
   "browserslist": {
@@ -24,5 +26,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
