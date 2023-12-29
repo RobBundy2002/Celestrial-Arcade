@@ -21,21 +21,6 @@ function CheckersBoard() {
         console.log(`Clicked on square (${row}, ${col})`);
     };
 
-    const renderSquare = (row, col, piece) => (
-        <div
-            key={`${row}-${col}`}
-            className={`checkers-square ${((row + col) % 2 === 0) ? 'light' : 'dark'}`}
-            onClick={() => handleSquareClick(row, col)}
-        >
-            {piece && <CheckersPiece color={piece} />}
-        </div>
-    );
-
-    const renderRow = (rowData, rowIndex) => (
-        <div key={rowIndex} className="checkers-row">
-            {rowData.map((piece, colIndex) => renderSquare(rowIndex, colIndex, piece))}
-        </div>
-    );
         return (
             <div className="checkers-board">
                 {initialBoard.map((row, rowIndex) => (
