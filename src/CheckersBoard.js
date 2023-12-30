@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CheckersBoard.css';
 import CheckersPiece from './CheckersPiece';
 
+
 const initialBoard = [
     ['', 'black', '', 'black', '', 'black', '', 'black'],
     ['black', '', 'black', '', 'black', '', 'black', ''],
@@ -56,6 +57,7 @@ function CheckersBoard() {
                 setSelectedPiece([row, col]);
             }
         }
+
     };
 
     return (
