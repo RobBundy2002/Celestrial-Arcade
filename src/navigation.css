@@ -1,0 +1,26 @@
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li:first-child {
+    margin-left: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #3498db;
+}
+
+.nav-link:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
