@@ -1,0 +1,49 @@
+
+body {
+
+    background-color: #87CEEB;
+}
+
+.flappy-bird-container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    background-color: #87CEEB;
+    border: 5px solid #2E8B57;
+    border-radius: 10px;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+.flappy-bird-container h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.flappy-bird-container p {
+    text-align: center;
+    color: #fff;
+}
+
+
+.bird {
+    position: absolute;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.pipe {
+    position: absolute;
+    width: 50px;
+    background-color: green;
+}
+
+.game-over-message {
+    text-align: center;
+    color: #fff;
+}
