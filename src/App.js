@@ -54,7 +54,6 @@ const App = () => {
                         </li>
                     </ul>
                 </nav>
-
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/checkers/*" element={<CheckersBoard />} />
