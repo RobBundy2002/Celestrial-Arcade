@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-rout
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
 import FlappyBirdGame from './FlappyBirdGame';
-import BreakoutGame from "./BreakoutGame";
 import './App.css';
 import './navigation.css';
 
@@ -22,8 +21,6 @@ const App = () => {
                 return 'Tic Tac Toe';
             case '/flappy-bird':
                 return 'Flappy Bird Game';
-            case '/break-out-game':
-                return 'Breakout'
             default:
                 return 'Unknown Page';
         }
@@ -49,9 +46,6 @@ const App = () => {
                         <li>
                             <Link to="/flappy-bird" className="nav-link">Flappy Bird</Link>
                         </li>
-                        <li>
-                            <Link to="/break-out-game" className="nav-link">Break Out</Link>
-                        </li>
                     </ul>
                 </nav>
 
@@ -60,7 +54,6 @@ const App = () => {
                     <Route path="/checkers/*" element={<CheckersBoard />} />
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
                     <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
-                    <Route path="/break-out-game/*" element={<BreakoutGame />} />
                 </Routes>
             </div>
         </Router>
