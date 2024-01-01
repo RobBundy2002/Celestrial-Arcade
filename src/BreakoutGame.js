@@ -143,6 +143,7 @@ const BreakoutGame = () => {
 
         gameLoop();
 
+
         return () => {
             document.removeEventListener('keydown', handleKeyPress);
         };
