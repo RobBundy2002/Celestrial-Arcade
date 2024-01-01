@@ -1,6 +1,6 @@
 nav ul {
     list-style: none;
-    margin: 0;
+    margin-top: 30px;
     padding: 0;
     width: 1000px;
 }
@@ -18,13 +18,14 @@ nav ul li:first-child {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: #3498db;
+    background-color: #2c3e50;
     padding: 15px 30px;
     border-radius: 10px;
-    background-color: #3498db;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    background-color: #2980b9;
     color: #fff;
+    background-color: #2980b9;
 }
