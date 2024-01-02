@@ -62,3 +62,7 @@ h1 {
 .center-text {
     text-align: center;
 }
+
+body.home-page {
+    overflow-y: auto; /* Enable vertical scrolling */
+}

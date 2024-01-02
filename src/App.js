@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
@@ -99,8 +99,19 @@ const FeaturedGame = ({ title, description, imageUrl }) => (
 );
 
 const Home = () => {
-    return (
-        <div className="home-container" style={{ paddingTop: '40px' }}>
+
+    useEffect(() => {
+        // Add a class to the body element when the Home component mounts
+        document.body.classList.add('home-page');
+
+        // Remove the class when the component unmounts
+        return () => {
+            document.body.classList.remove('home-page');
+        };
+    }, []); //
+
+        return (
+            <div className="home-container" style={{ paddingTop: '40px' }}>
             <header>
                 <h1 className="center-text" style={{ paddingLeft: '115px' }}>Welcome to The Game Website</h1>
                 <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games</p>
