@@ -14,7 +14,7 @@ h1 {
 }
 
 .App {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -28,4 +28,37 @@ h1 {
 
 .title {
     margin: 0;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.featured-games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.games-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.featured-game-box {
+    text-align: center;
+}
+
+.featured-game-image {
+    width: 400px;
+    height: 400px;
+}
+
+.center-text {
+    text-align: center;
 }

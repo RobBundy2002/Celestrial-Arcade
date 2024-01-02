@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Gaming-Website-Project/static/css/main.6a3088d8.css",
+    "main.js": "/Gaming-Website-Project/static/js/main.d74b0625.js",
+    "index.html": "/Gaming-Website-Project/index.html",
+    "main.6a3088d8.css.map": "/Gaming-Website-Project/static/css/main.6a3088d8.css.map",
+    "main.d74b0625.js.map": "/Gaming-Website-Project/static/js/main.d74b0625.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a3088d8.css",
+    "static/js/main.d74b0625.js"
+  ]
+}

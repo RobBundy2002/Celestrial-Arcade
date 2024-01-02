@@ -2,5 +2,10 @@ canvas {
     border: 2px solid #0095DD;
     display: block;
     margin-left: 550px;
+    margin-right: auto;
     margin-top: 100px;
+    width: calc(100% - 300px);
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }

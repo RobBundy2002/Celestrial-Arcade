@@ -21,7 +21,7 @@ const LabelBottomNavigation = () => {
                 position: 'fixed',
                 top: 0,
                 width: '100%',
-                background: 'radial-gradient(circle, #220033 0%, #00294e 100%)',
+                background: '#00294e ',
                 color: 'white',
                 zIndex: 1000,
                 height: '64px',
@@ -88,16 +88,64 @@ const LabelBottomNavigation = () => {
         </BottomNavigation>
     );
 };
+const FeaturedGame = ({ title, description, imageUrl }) => (
+    <div className="featured-game-box">
+        <img className="featured-game-image" src={imageUrl} alt={title} />
+        <div className="game-details">
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    </div>
+);
 
 const Home = () => {
-    return <div></div>;
+    return (
+        <div className="home-container" style={{ paddingTop: '40px' }}>
+            <header>
+                <h1 className="center-text" style={{ paddingLeft: '115px' }}>Welcome to The Game Website</h1>
+                <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games</p>
+            </header>
+            <section className="featured-games" style={{ paddingLeft: '115px' }}>
+                <div className="games-row">
+                    <FeaturedGame
+                        title="Checkers"
+                        description="Classic strategy board game for all ages. Challenge your friends or play against the computer."
+                        imageUrl="https://static7.depositphotos.com/1263295/750/i/450/depositphotos_7505639-stock-photo-checkers.jpg"
+                        imageStyle={{ width: '400px', height: '400px' }}
+                    />
+                    <FeaturedGame
+                        title="Tic Tac Toe"
+                        description="The timeless game of Xs and Os. Test your strategy against a friend or the AI."
+                        imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
+                        imageStyle={{ width: '400px', height: '400px' }}
+                    />
+                </div>
+                <div className="games-row">
+                    <FeaturedGame
+                        title="Breakout"
+                        description="Break the bricks with the paddle and ball. How many levels can you conquer?"
+                        imageUrl="https://www.usatoday.com/gcdn/media/USATODAY/USATODAY/2013/05/14/atari-breakout-16_9.jpg?width=1023&height=511&fit=crop&format=pjpg&auto=webp"
+                        imageStyle={{ width: '400px', height: '400px' }}
+                    />
+                    <FeaturedGame
+                        title="Flappy Bird"
+                        description="Navigate the bird through pipes and challenge your reflexes. How far can you fly?"
+                        imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYCLX-iL7a7cYcTFmPGPTRjwkz_D6un53PBqVNgtRCAA&s"
+                        imageStyle={{ width: '400px', height: '400px' }}
+                    />
+                </div>
+            </section>
+        </div>
+    );
 };
+
+
 
 const App = () => {
     return (
         <Router>
-            <div className="App" style={{ marginBottom: '20px' }}>
-                <Routes>
+            <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
+            <Routes>
                     <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/checkers/*" element={<CheckersBoard />} />

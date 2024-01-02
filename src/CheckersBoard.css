@@ -2,15 +2,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: repeat(8, 50px);
-    width: 100%;
-    max-width: 2400px;
+    width: calc(100% - 300px);
+    max-width: 400px;
     height: 100%;
     border: 1px solid #000;
     margin-left: 550px;
+    margin-right: auto;
     margin-top: 100px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     background: linear-gradient(to bottom, #3498db, #2980b9);
 }
+
 
 .checkers-row {
     display: flex;
