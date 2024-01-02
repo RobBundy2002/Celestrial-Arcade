@@ -33,7 +33,7 @@ Running the Website:
 npm start
 
 Visit http://localhost:3000 in your web browser.
-Or go to https://robbundy2002.github.io/
+Or go to https://robbundy2002.github.io/Gaming-Website-Project/
 
 Controls
 Each game may have specific controls. Refer to the individual game sections for details.
