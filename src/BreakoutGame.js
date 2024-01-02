@@ -152,6 +152,7 @@ const BreakoutGame = () => {
         }
     };
 
+
     // Game loop
     const gameLoop = () => {
         updateGame();
