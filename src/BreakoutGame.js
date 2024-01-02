@@ -115,10 +115,31 @@ const BreakoutGame = () => {
             }
         }
         if (gameOver) {
-            context.fillStyle = '#000';
-            context.font = '30px Arial';
-            context.fillText('Game Over', canvas.width / 2 - 80, canvas.height / 2);
+            drawGameOver();
         }
+    };
+    const drawGameOver = () => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
+
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the "Game Over" text
+        context.fillStyle = '#000';
+        context.font = 'bold 50px Helvetica'; // Adjust font size and weight
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+
+        // Add a cool animation (example: bounce effect)
+        const bounceHeight = 20; // Adjust bounce height
+        const bounceSpeed = 5; // Adjust bounce speed
+        const yOffset = Math.sin(Date.now() * 0.002 * bounceSpeed) * bounceHeight;
+
+        context.fillText('Game Over', canvas.width / 2, canvas.height / 2 + yOffset);
+
+        // Request the next animation frame
+        requestAnimationFrame(drawGameOver);
     };
 
     // Handle user input
