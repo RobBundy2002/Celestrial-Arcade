@@ -5,6 +5,7 @@
     grid-template-rows: repeat(3, 100px);
     gap: 5px;
     margin-left: 615px;
+    margin-top: 100px;
 }
 
 .cell {

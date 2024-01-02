@@ -1,67 +1,111 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
 import FlappyBirdGame from './FlappyBirdGame';
 import BreakoutGame from "./BreakoutGame";
 import './App.css';
-import './navigation.css';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+
+const LabelBottomNavigation = () => {
+    const [value, setValue] = React.useState('recents');
+
+    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+        setValue(newValue);
+    };
+
+    return (
+        <BottomNavigation
+            sx={{
+                position: 'fixed',
+                top: 0,
+                width: '100%',
+                background: 'radial-gradient(circle, #220033 0%, #00294e 100%)',
+                color: 'white',
+                zIndex: 1000,
+                height: '64px',
+            }}
+            value={value}
+            onChange={handleChange}
+            showLabels
+        >
+            <BottomNavigationAction
+                label="Home"
+                value=""
+                component={Link}
+                to="/"
+                sx={{
+                    color: 'white', // Set text color to white
+                    fontSize: '3 rem', // Set font size
+                    fontWeight: 'bold', // Set font weight to bold
+                }}
+            />
+            <BottomNavigationAction
+                label="Checkers"
+                value="checkers"
+                component={Link}
+                to="/checkers"
+                sx={{
+                    color: 'white',
+                    fontSize: '3 rem',
+                    fontWeight: 'bold',
+                }}
+            />
+            <BottomNavigationAction
+                label="Tic Tac Toe"
+                value="tic-tac-toe"
+                component={Link}
+                to="/tic-tac-toe"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
+            <BottomNavigationAction
+                label="Flappy Bird"
+                value="flappy-bird"
+                component={Link}
+                to="/flappy-bird"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
+            <BottomNavigationAction
+                label="Break Out"
+                value="break-out-game"
+                component={Link}
+                to="/break-out-game"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
+        </BottomNavigation>
+    );
+};
 
 const Home = () => {
     return <div></div>;
 };
 
 const App = () => {
-    const getTitle = () => {
-        switch (window.location.pathname) {
-            case '/':
-                return 'The Gaming Website';
-            case '/checkers':
-                return 'Checkers';
-            case '/tic-tac-toe':
-                return 'Tic Tac Toe';
-            case '/flappy-bird':
-                return 'Flappy Bird Game';
-            case '/break-out-game':
-                return 'Breakout'
-            default:
-                return 'Unknown Page';
-        }
-    };
-
     return (
         <Router>
-            <div className="App">
-                <div className='top-bar'>
-                    <h1 className="title">{getTitle()}</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/" className="nav-link">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/checkers" className="nav-link">Checkers</Link>
-                        </li>
-                        <li>
-                            <Link to="/tic-tac-toe" className="nav-link">Tic Tac Toe</Link>
-                        </li>
-                        <li>
-                            <Link to="/flappy-bird" className="nav-link">Flappy Bird</Link>
-                        </li>
-                        <li>
-                            <Link to="/break-out-game" className="nav-link">Break Out</Link>
-                        </li>
-                    </ul>
-                </nav>
-
+            <div className="App" style={{ marginBottom: '20px' }}>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Navigate to="/home" />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/checkers/*" element={<CheckersBoard />} />
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
                     <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
                     <Route path="/break-out-game/*" element={<BreakoutGame />} />
                 </Routes>
+                <LabelBottomNavigation />
             </div>
         </Router>
     );
