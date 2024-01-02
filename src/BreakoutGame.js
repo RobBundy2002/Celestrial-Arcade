@@ -1,13 +1,14 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './BreakoutGame.css'
 const BreakoutGame = () => {
     const canvasRef = useRef(null);
-    const ballRef = useRef({ x: 50, y: 50, radius: 10, speed: 5, dx: 2, dy: 2 });
+    const ballRef = useRef({ x: 50, y: 50, radius: 10, speed: 3, dx: 2, dy: -2 });
     const paddleRef = useRef({ width: 100, height: 10, x: 0, speed: 8 });
     const brickRowCount = 5;
     const brickColumnCount = 5;
     const bricksRef = useRef([]);
+    const [gameOver, setGameOver] = useState(false);
 
     // Initialize bricks
     useEffect(() => {
@@ -46,6 +47,10 @@ const BreakoutGame = () => {
             ball.dy = -ball.dy;
         }
 
+        if (ball.y + ball.radius > canvasRef.current.height) {
+            setGameOver(true);
+        }
+
         // Check for collision with bricks
         for (let c = 0; c < brickColumnCount; c++) {
             for (let r = 0; r < brickRowCount; r++) {
@@ -65,6 +70,8 @@ const BreakoutGame = () => {
         }
     };
 
+
+
     // Draw the game elements
     const drawGame = () => {
         const canvas = canvasRef.current;
@@ -73,38 +80,44 @@ const BreakoutGame = () => {
         const paddle = paddleRef.current;
 
         context.clearRect(0, 0, canvas.width, canvas.height);
+        if(!gameOver) {
+            // Draw the ball
+            context.beginPath();
+            context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            context.fillStyle = '#0095DD';
+            context.fill();
+            context.closePath();
 
-        // Draw the ball
-        context.beginPath();
-        context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-        context.fillStyle = '#0095DD';
-        context.fill();
-        context.closePath();
+            // Draw the paddle
+            context.beginPath();
+            context.rect(paddle.x, canvas.height - paddle.height, paddle.width, paddle.height);
+            context.fillStyle = '#0095DD';
+            context.fill();
+            context.closePath();
 
-        // Draw the paddle
-        context.beginPath();
-        context.rect(paddle.x, canvas.height - paddle.height, paddle.width, paddle.height);
-        context.fillStyle = '#0095DD';
-        context.fill();
-        context.closePath();
+            // Draw the bricks
+            for (let c = 0; c < brickColumnCount; c++) {
+                for (let r = 0; r < brickRowCount; r++) {
+                    const brick = bricksRef.current[c][r];
+                    if (brick.status === 1) {
+                        brick.x = c * (canvas.width / brickColumnCount);
+                        brick.y = r * (canvas.height / 10);
+                        brick.width = canvas.width / brickColumnCount;
+                        brick.height = canvas.height / 20;
 
-        // Draw the bricks
-        for (let c = 0; c < brickColumnCount; c++) {
-            for (let r = 0; r < brickRowCount; r++) {
-                const brick = bricksRef.current[c][r];
-                if (brick.status === 1) {
-                    brick.x = c * (canvas.width / brickColumnCount);
-                    brick.y = r * (canvas.height / 10);
-                    brick.width = canvas.width / brickColumnCount;
-                    brick.height = canvas.height / 20;
-
-                    context.beginPath();
-                    context.rect(brick.x, brick.y, brick.width, brick.height);
-                    context.fillStyle = '#0095DD';
-                    context.fill();
-                    context.closePath();
+                        context.beginPath();
+                        context.rect(brick.x, brick.y, brick.width, brick.height);
+                        context.fillStyle = '#0095DD';
+                        context.fill();
+                        context.closePath();
+                    }
                 }
             }
+        }
+        if (gameOver) {
+            context.fillStyle = '#000';
+            context.font = '30px Arial';
+            context.fillText('Game Over', canvas.width / 2 - 80, canvas.height / 2);
         }
     };
 
@@ -137,7 +150,7 @@ const BreakoutGame = () => {
 
         // Set initial position of the ball just above the paddle
         ballRef.current.x = canvas.width / 2;
-        ballRef.current.y = canvas.height - paddleRef.current.height - ballRef.current.radius;
+        ballRef.current.y = canvas.height / 2 ;
 
         document.addEventListener('keydown', handleKeyPress);
 

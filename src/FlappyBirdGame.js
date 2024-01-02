@@ -6,8 +6,24 @@ const FlappyBirdGame = () => {
     const [pipes, setPipes] = useState([]);
     const [score, setScore] = useState(0);
     const [isGameOver, setIsGameOver] = useState(false);
-
     const gameAreaRef = useRef(null);
+
+    const checkBirdOffScreen = () => {
+        console.log(birdY);
+        const gameArea = gameAreaRef.current;
+
+        // Check if the bird is off the screen
+        if (birdY + 2 > gameArea.offsetHeight) {
+            endGame();
+        }
+        if (birdY < 0) {
+            endGame();
+        }
+    };
+
+    const endGame = () => {
+        setIsGameOver(true);
+    };
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -75,18 +91,6 @@ const FlappyBirdGame = () => {
         });
     };
 
-    const checkBirdOffScreen = () => {
-        const gameArea = gameAreaRef.current;
-
-        // Check if the bird is off the screen
-        if (birdY + 40 > gameArea.offsetHeight) {
-            endGame();
-        }
-    };
-
-    const endGame = () => {
-        setIsGameOver(true);
-    };
 
     return (
         <div className="flappy-bird-container" ref={gameAreaRef}>
