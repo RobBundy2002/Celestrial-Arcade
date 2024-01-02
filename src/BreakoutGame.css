@@ -9,3 +9,7 @@ canvas {
     max-height: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+.body{
+    overflow-y: hidden;
+}

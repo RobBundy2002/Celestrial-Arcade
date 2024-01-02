@@ -24,3 +24,8 @@
 .cell:hover {
     background-color: #ddd;
 }
+
+
+.body{
+    overflow-y: hidden;
+}
