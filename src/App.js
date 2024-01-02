@@ -147,6 +147,7 @@ const App = () => {
             <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
             <Routes>
                     <Route path="/" element={<Navigate to="/home" />} />
+                    <Route path="/Gaming-Website-Project/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/checkers/*" element={<CheckersBoard />} />
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
