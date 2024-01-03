@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './CheckersBoard.css';
 import CheckersPiece from './CheckersPiece';
-
+import './EndGameScreen.css';
+import EndGameScreen from './EndGameScreen';
 
 const initialBoard = [
     ['', 'black', '', 'black', '', 'black', '', 'black'],
@@ -17,6 +18,16 @@ const initialBoard = [
 function CheckersBoard() {
     const [board, setBoard] = useState(initialBoard);
     const [selectedPiece, setSelectedPiece] = useState(null);
+    const [endGame, setEndGame] = useState(false);
+
+    useEffect(() => {
+        const blackPiecesLeft = board.flat().filter(piece => piece === 'black').length;
+        const whitePiecesLeft = board.flat().filter(piece => piece === 'white').length;
+
+        if (blackPiecesLeft === 0 || whitePiecesLeft === 0) {
+            setEndGame(true);
+        }
+    }, [board]);
 
     const handleSquareClick = (row, col) => {
         if (selectedPiece) {
@@ -60,23 +71,30 @@ function CheckersBoard() {
 
     };
 
+
     return (
-        <div className="checkers-board">
-            {board.map((row, rowIndex) => (
-                <div key={rowIndex} className="checkers-row">
-                    {row.map((piece, colIndex) => (
-                        <div
-                            key={`${rowIndex}-${colIndex}`}
-                            className={`checkers-square ${
-                                (rowIndex + colIndex) % 2 === 0 ? 'light' : 'dark'
-                            }`}
-                            onClick={() => handleSquareClick(rowIndex, colIndex)}
-                        >
-                            {piece && <CheckersPiece color={piece} />}
+        <div>
+            {endGame ? (
+                <EndGameScreen winner={board.flat().filter(piece => piece !== '')[0]} />
+            ) : (
+                <div className="checkers-board">
+                    {board.map((row, rowIndex) => (
+                        <div key={rowIndex} className="checkers-row">
+                            {row.map((piece, colIndex) => (
+                                <div
+                                    key={`${rowIndex}-${colIndex}`}
+                                    className={`checkers-square ${
+                                        (rowIndex + colIndex) % 2 === 0 ? 'light' : 'dark'
+                                    }`}
+                                    onClick={() => handleSquareClick(rowIndex, colIndex)}
+                                >
+                                    {piece && <CheckersPiece color={piece} />}
+                                </div>
+                            ))}
                         </div>
                     ))}
                 </div>
-            ))}
+            )}
         </div>
     );
 }

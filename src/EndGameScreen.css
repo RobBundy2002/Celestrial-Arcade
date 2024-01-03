@@ -1,0 +1,24 @@
+
+.end-game-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.end-game-screen {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    color: black;
+    margin-left: 250px;
+    margin-right: 100px;
+    margin-top: 70px;
+}
