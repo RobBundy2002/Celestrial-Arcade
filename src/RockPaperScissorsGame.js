@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import rockImage from './Rock.jpg';
-import paperImage from './Paper.png';
-import scissorsImage from './Scissors.jpg';
-
+import rockImage from './Rock2.JPG';
+import paperImage from './Paper2.JPG';
+import scissorsImage from './Scissor2.jpg';
+import './RockPaperScissors.css';
 const RockPaperScissorsGame = () => {
     const [playerChoice, setPlayerChoice] = useState(null);
     const [computerChoice, setComputerChoice] = useState(null);
@@ -37,9 +37,9 @@ const RockPaperScissorsGame = () => {
     return (
         <div style={{ textAlign: 'center', marginTop: '100px', marginLeft: '150px' }}>
             <h2 style={{ fontSize: '2em' }}>Rock, Paper, Scissors</h2>
-            <div>
+            <div className="choices-container">
                 {choices.map((choice) => (
-                    <button key={choice} onClick={() => playGame(choice)}>
+                    <button key={choice} onClick={() => playGame(choice)} className="choice-button">
                         <img
                             src={choice === 'rock' ? rockImage : (choice === 'paper' ? paperImage : scissorsImage)}
                             alt={choice}

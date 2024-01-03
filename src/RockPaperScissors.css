@@ -1,0 +1,12 @@
+.choice-button {
+    background-color: white;
+    margin: 5px; /* Add margin between buttons if needed */
+    padding: 10px; /* Add padding to buttons if needed */
+    border: 1px solid #ccc; /* Add border for a cleaner look if needed */
+    border-radius: 5px; /* Add border radius for rounded corners if needed */
+    cursor: pointer;
+}
+
+.choice-button:hover {
+    background-color: #f0f0f0; /* Change background color on hover if desired */
+}
