@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Celestial-Arcade/static/css/main.844effd6.css",
-    "main.js": "/Celestial-Arcade/static/js/main.dee6aa3b.js",
+    "main.css": "/Celestial-Arcade/static/css/main.79cd40a7.css",
+    "main.js": "/Celestial-Arcade/static/js/main.1e4109c5.js",
     "static/media/Logo.png": "/Celestial-Arcade/static/media/Logo.a878472ecb296c9c01d3.png",
     "static/media/Paper.png": "/Celestial-Arcade/static/media/Paper.7301b4700afe1b9d1ef4.png",
     "static/media/Scissors.jpg": "/Celestial-Arcade/static/media/Scissors.8a54c6ed3d6dbd19bb92.jpg",
     "index.html": "/Celestial-Arcade/index.html",
-    "main.844effd6.css.map": "/Celestial-Arcade/static/css/main.844effd6.css.map",
-    "main.dee6aa3b.js.map": "/Celestial-Arcade/static/js/main.dee6aa3b.js.map"
+    "main.79cd40a7.css.map": "/Celestial-Arcade/static/css/main.79cd40a7.css.map",
+    "main.1e4109c5.js.map": "/Celestial-Arcade/static/js/main.1e4109c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.844effd6.css",
-    "static/js/main.dee6aa3b.js"
+    "static/css/main.79cd40a7.css",
+    "static/js/main.1e4109c5.js"
   ]
 }
