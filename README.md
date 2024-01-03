@@ -38,7 +38,7 @@ Follow these steps to set up the project locally.
 
 4. Visit http://localhost:3000 in your web browser.
    
-5. (If You Just Want To View Website) Go to https://robbundy2002.github.io/Celestrial-Arcade/
+5. (If You Just Want To View Website) Go to https://robbundy2002.github.io/Gaming-Website-Project/
 
 Controls
 Each game may have specific controls. Refer to the individual game sections for details.
