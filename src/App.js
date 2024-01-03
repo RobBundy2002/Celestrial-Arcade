@@ -11,7 +11,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
-
+import MemoryMatchImage from './Memory Match.png'
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -81,17 +81,6 @@ const LabelBottomNavigation = () => {
                 value="flappy-bird"
                 component={Link}
                 to="/flappy-bird"
-                sx={{
-                    color: 'white',
-                    fontSize: '3rem',
-                    fontWeight: 'bold',
-                }}
-            />
-            <BottomNavigationAction
-                label="Break Out"
-                value="break-out-game"
-                component={Link}
-                to="/break-out-game"
                 sx={{
                     color: 'white',
                     fontSize: '3rem',
@@ -172,27 +161,27 @@ const Home = () => {
                         title="Checkers"
                         description="Classic strategy board game for all ages!"
                         imageUrl="https://static7.depositphotos.com/1263295/750/i/450/depositphotos_7505639-stock-photo-checkers.jpg"
-                        imageStyle={{ width: '400px', height: '400px' }}
+                        imageStyle={{ width: '300px', height: '300px' }}
                     />
                     <FeaturedGame
                         title="Tic Tac Toe"
                         description="The timeless game of Xs and Os."
                         imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
-                        imageStyle={{ width: '400px', height: '400px' }}
+                        imageStyle={{ width: '300px', height: '300px' }}
                     />
                 </div>
                 <div className="games-row">
                     <FeaturedGame
-                        title="Breakout"
-                        description="Break the bricks with the paddle and ball."
-                        imageUrl="https://www.usatoday.com/gcdn/media/USATODAY/USATODAY/2013/05/14/atari-breakout-16_9.jpg?width=1023&height=511&fit=crop&format=pjpg&auto=webp"
-                        imageStyle={{ width: '400px', height: '400px' }}
+                        title="Memory Match"
+                        description="Match the cards in as few moves as possible"
+                        imageUrl="https://media.licdn.com/dms/image/D4E2DAQEMyAHAPNLHPw/profile-treasury-image-shrink_1920_1920/0/1704264625588?e=1704870000&v=beta&t=7Oq7yxOjqrXr_3XPKrr20ChDI0BdWnU0sygDVNi2gBI"
+                        imageStyle={{ width: '300px', height: '300px' }}
                     />
                     <FeaturedGame
                         title="Flappy Bird"
                         description="How far can you fly?"
                         imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYCLX-iL7a7cYcTFmPGPTRjwkz_D6un53PBqVNgtRCAA&s"
-                        imageStyle={{ width: '400px', height: '400px' }}
+                        imageStyle={{ width: '300px', height: '300px' }}
                     />
                 </div>
             </section>
@@ -211,7 +200,6 @@ const App = () => {
                     <Route path="/checkers/*" element={<CheckersBoard />} />
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
                     <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
-                    <Route path="/break-out-game/*" element={<BreakoutGame />} />
                     <Route path="/rock-paper-scissors/*" element={<RockPaperScissorsGame />} />
                     <Route path="/memory-match*" element={<MemoryMatch />} />
                 </Routes>
