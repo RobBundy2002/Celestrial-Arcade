@@ -16,6 +16,9 @@ Welcome to the Gaming Website Project! This website features several classic gam
 ### Breakout
 - Classic Breakout game with paddle and bricks.
 
+### Rock Paper Scissors
+- Traditional Rock Paper Scissors you can play against a computer.
+
 ## Getting Started
 Follow these steps to set up the project locally.
 
