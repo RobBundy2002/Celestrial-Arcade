@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
-import FlappyBirdGame from './FlappyBirdGame';;
+import FlappyBirdGame from './FlappyBirdGame';
 import RockPaperScissorsGame from "./RockPaperScissorsGame";
 import './App.css';
 import './Home.css';
@@ -10,6 +10,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
+
 
 
 const LabelBottomNavigation = () => {
@@ -111,17 +112,23 @@ const LabelBottomNavigation = () => {
         </BottomNavigation>
     );
 };
-const FeaturedGame = ({ title, description, imageUrl }) => (
-    <div className="featured-game-box">
-        <img className="featured-game-image" src={imageUrl} alt={title} />
-        <div className="game-details">
-            <h3>{title}</h3>
-            <p>{description}</p>
+const FeaturedGame = ({ title, description, imageUrl }) => {
+    const [isZoomed, setZoomed] = useState(false);
+
+    const handleImageClick = () => {
+        setZoomed(!isZoomed);
+    };
+
+    return (
+        <div className={`featured-game-box ${isZoomed ? 'zoomed' : ''}`} onClick={handleImageClick}>
+            <img className="featured-game-image" src={imageUrl} alt={title} />
+            <div className="game-details">
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
         </div>
-    </div>
-);
-
-
+    );
+};
 
 const Home = () => {
 

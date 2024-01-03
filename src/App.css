@@ -49,6 +49,14 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+.featured-game-box {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.featured-game-box.zoomed {
+    transform: scale(1.2); /* Adjust the scale factor for zoom effect */
+}
 
 .games-row {
     display: flex;
