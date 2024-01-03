@@ -1,11 +1,23 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, #220033 0%, #00294e 100%);
+    background: radial-gradient(circle, #000000 0%, #000000 100%),
+    linear-gradient(to bottom, #000000 0%, #00294e 100%);
+    background-blend-mode: screen;
     color: #fff;
-    width: 50vh;
+    width: 50vw;
+    overflow: hidden; /* Ensure the animation doesn't cause scrollbars */
+    animation: dynamicBackground 15s infinite alternate;
+}
+
+@keyframes dynamicBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
 }
 
 h1 {
@@ -16,14 +28,6 @@ h1 {
 .App {
     max-width: 1400px;
     margin: 0 auto;
-}
-
-.top-bar {
-    background: radial-gradient(circle, #220033 0%, #00294e 100%);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    width: 365.5%;
 }
 
 .title {

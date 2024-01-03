@@ -26,7 +26,7 @@ const LabelBottomNavigation = () => {
                 position: 'fixed',
                 top: 0,
                 width: '100%',
-                background: '#00294e ',
+                background: 'black ',
                 color: 'white',
                 zIndex: 1000,
                 height: '64px',
