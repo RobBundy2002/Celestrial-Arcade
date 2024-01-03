@@ -48,7 +48,7 @@ const TicTacToeGame = () => {
             if (winner === 'T') {
                 // It's a tie
                 setResultJsx(
-                    <div style={{ marginTop: '20px', marginLeft: '690px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
+                    <div style={{ marginTop: '20px', marginLeft: '720px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
                     <p>It's a tie!</p>
                     </div>
                 );
@@ -56,7 +56,6 @@ const TicTacToeGame = () => {
                 // Player X or O wins
                 setResultJsx(
                     <div style={{ marginTop: '20px', marginLeft: '690px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
-
                     <p>Player {winner} wins!</p>
                     </div>
                 );
@@ -82,6 +81,9 @@ const TicTacToeGame = () => {
     // Initialize the game board
     return (
         <div>
+            <h1 style={{ marginTop: '70px', marginLeft: '140px', color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
+                TicTacToe
+            </h1>
             {renderBoard()}
             {resultJsx && resultJsx}
         </div>
