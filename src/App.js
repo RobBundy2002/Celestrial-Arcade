@@ -1,26 +1,32 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+//React Imports
+
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
 import FlappyBirdGame from './FlappyBirdGame';
-import BreakoutGame from "./BreakoutGame";
 import RockPaperScissorsGame from "./RockPaperScissorsGame";
-import './App.css';
-import './Home.css';
+import MemoryMatch from "./MemoryMatch";
+//Game Imports
+
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+//NavBar Imports
+
 import LogoImage from './Logo.png';
-import MemoryMatch from "./MemoryMatch";
-import MemoryMatchImage from './Memory Match.png'
+//Image Imports
+
+import './App.css';
+import './Home.css';
+//Styling Imports
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
-
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
     };
-
+//Helper Function to assign values to the nav bar
 
     return (
         <BottomNavigation
@@ -38,6 +44,7 @@ const LabelBottomNavigation = () => {
             showLabels
         >
             <img
+                //The Logo
                 src={LogoImage}
                 alt="Logo"
                 style={{ height: '64px', width: 'auto' }}
@@ -112,6 +119,8 @@ const LabelBottomNavigation = () => {
         </BottomNavigation>
     );
 };
+
+//This function is what sets up the output of the 4 games on the home page
 const FeaturedGame = ({ title, description, imageUrl }) => (
     <div className="featured-game-box">
         <img className="featured-game-image" src={imageUrl} alt={title} />
@@ -123,7 +132,7 @@ const FeaturedGame = ({ title, description, imageUrl }) => (
 );
 
 
-
+//This function is purely dealing with the home page implementation of the website
 const Home = () => {
 
     //Potential Error Fix
@@ -140,6 +149,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="background">
+                //These are the moving circles in the background
                 <div className="moving-part" style={{ left: '20%', top: '20%' }} />
                 <div className="moving-part" style={{ left: '50%', top: '70%' }} />
                 <div className="moving-part" style={{ left: '80%', top: '50%' }} />
@@ -191,6 +201,7 @@ const Home = () => {
 
 const App = () => {
     return (
+        //These serve as the buttons/links for all of the games
         <Router>
             <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
                 <Routes>
