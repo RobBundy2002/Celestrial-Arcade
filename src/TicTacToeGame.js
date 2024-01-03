@@ -5,6 +5,7 @@ const TicTacToeGame = () => {
     const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
     const [currentPlayer, setCurrentPlayer] = useState('X');
     const [gameActive, setGameActive] = useState(true);
+    const [resultJsx, setResultJsx] = useState(null);
 
     // Function to check for a winner
     const checkWinner = () => {
@@ -43,10 +44,22 @@ const TicTacToeGame = () => {
         const winner = checkWinner();
         if (winner) {
             setGameActive(false);
+            // Display winner information as JSX elements
             if (winner === 'T') {
-                alert('It\'s a tie!');
+                // It's a tie
+                setResultJsx(
+                    <div style={{ marginTop: '20px', marginLeft: '690px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
+                    <p>It's a tie!</p>
+                    </div>
+                );
             } else {
-                alert(`Player ${winner} wins!`);
+                // Player X or O wins
+                setResultJsx(
+                    <div style={{ marginTop: '20px', marginLeft: '690px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
+
+                    <p>Player {winner} wins!</p>
+                    </div>
+                );
             }
         } else {
             setCurrentPlayer((prevPlayer) => (prevPlayer === 'O' ? 'X' : 'O'));
@@ -70,8 +83,10 @@ const TicTacToeGame = () => {
     return (
         <div>
             {renderBoard()}
+            {resultJsx && resultJsx}
         </div>
     );
 };
+
 
 export default TicTacToeGame;
