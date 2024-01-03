@@ -2,8 +2,7 @@ import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
-import FlappyBirdGame from './FlappyBirdGame';
-import BreakoutGame from "./BreakoutGame";
+import FlappyBirdGame from './FlappyBirdGame';;
 import RockPaperScissorsGame from "./RockPaperScissorsGame";
 import './App.css';
 import './Home.css';
@@ -11,7 +10,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
-import MemoryMatchImage from './Memory Match.png'
+
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
