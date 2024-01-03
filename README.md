@@ -1,6 +1,6 @@
 # Gaming Website Project
 
-Welcome to the Gaming Website Project! This website features several classic games, including Tic-Tac-Toe, Checkers, Flappy Bird, and Breakout. Have fun playing and exploring the various games.
+Welcome to the Gaming Website Project! This website features several classic games, including Tic-Tac-Toe, Checkers, Flappy Bird, Rock Paper Scissors, and Memory Match. Have fun playing and exploring the various games.
 
 ## Games Included
 
@@ -13,11 +13,11 @@ Welcome to the Gaming Website Project! This website features several classic gam
 ### Flappy Bird
 - Flappy Bird game implemented in React.
 
-### Breakout
-- Classic Breakout game with paddle and bricks.
-
 ### Rock Paper Scissors
 - Traditional Rock Paper Scissors you can play against a computer.
+
+### Memory Match
+- Memory Match With Animal Symbol Cards.
 
 ## Getting Started
 Follow these steps to set up the project locally.
@@ -29,14 +29,16 @@ Follow these steps to set up the project locally.
 ### Installation
 1. Clone the repository:
    git clone https://github.com/RobBundy2002/Gaming-Website-Project.git
-Install dependencies:
-npm install
+   
+2. Install dependencies:
+   npm install
 
-Running the Website:
-npm start
+3. Running the Website:
+   npm start
 
-Visit http://localhost:3000 in your web browser.
-Or go to https://robbundy2002.github.io/Gaming-Website-Project/
+4. Visit http://localhost:3000 in your web browser.
+   
+5. (If You Just Want To View Website) Go to https://robbundy2002.github.io/Celestrial-Arcade/
 
 Controls
 Each game may have specific controls. Refer to the individual game sections for details.
