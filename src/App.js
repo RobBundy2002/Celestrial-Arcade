@@ -1,4 +1,3 @@
-
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
@@ -9,7 +8,7 @@ import './App.css';
 import './Home.css';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-
+import LogoImage from './Color logo - no background.png';
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -35,6 +34,12 @@ const LabelBottomNavigation = () => {
             onChange={handleChange}
             showLabels
         >
+            <img
+                src={LogoImage}
+                alt="Logo"
+                style={{ height: '64px', width: 'auto' }}
+            />
+
             <BottomNavigationAction
                 label="Home"
                 value=""
