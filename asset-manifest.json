@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Gaming-Website-Project/static/css/main.79cd40a7.css",
-    "main.js": "/Gaming-Website-Project/static/js/main.be85ddda.js",
+    "main.css": "/Gaming-Website-Project/static/css/main.d3adc632.css",
+    "main.js": "/Gaming-Website-Project/static/js/main.38b84780.js",
     "static/media/Logo.png": "/Gaming-Website-Project/static/media/Logo.a878472ecb296c9c01d3.png",
     "static/media/Paper.png": "/Gaming-Website-Project/static/media/Paper.7301b4700afe1b9d1ef4.png",
     "static/media/Scissors.jpg": "/Gaming-Website-Project/static/media/Scissors.8a54c6ed3d6dbd19bb92.jpg",
     "index.html": "/Gaming-Website-Project/index.html",
-    "main.79cd40a7.css.map": "/Gaming-Website-Project/static/css/main.79cd40a7.css.map",
-    "main.be85ddda.js.map": "/Gaming-Website-Project/static/js/main.be85ddda.js.map"
+    "main.d3adc632.css.map": "/Gaming-Website-Project/static/css/main.d3adc632.css.map",
+    "main.38b84780.js.map": "/Gaming-Website-Project/static/js/main.38b84780.js.map"
   },
   "entrypoints": [
-    "static/css/main.79cd40a7.css",
-    "static/js/main.be85ddda.js"
+    "static/css/main.d3adc632.css",
+    "static/js/main.38b84780.js"
   ]
 }
