@@ -1,3 +1,4 @@
+
 import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CheckersBoard from './CheckersBoard';
@@ -5,15 +6,19 @@ import TicTacToePage from './TicTacToePage';
 import FlappyBirdGame from './FlappyBirdGame';
 import BreakoutGame from "./BreakoutGame";
 import './App.css';
+import './Home.css';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
+
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
     };
+
 
     return (
         <BottomNavigation
@@ -98,8 +103,11 @@ const FeaturedGame = ({ title, description, imageUrl }) => (
     </div>
 );
 
+
+
 const Home = () => {
 
+    //Potential Error Fix
     useEffect(() => {
         // Add a class to the body element when the Home component mounts
         document.body.classList.add('home-page');
@@ -108,13 +116,25 @@ const Home = () => {
         return () => {
             document.body.classList.remove('home-page');
         };
-    }, []); //
+    }, []);
 
-        return (
-            <div className="home-container" style={{ paddingTop: '40px' }}>
+    return (
+        <div className="home-container">
+            <div className="background">
+                <div className="moving-part" style={{ left: '20%', top: '20%' }} />
+                <div className="moving-part" style={{ left: '50%', top: '70%' }} />
+                <div className="moving-part" style={{ left: '80%', top: '50%' }} />
+                <div className="moving-part" style={{ left: '30%', top: '40%' }} />
+                <div className="moving-part" style={{ left: '70%', top: '20%' }} />
+                <div className="moving-part" style={{ left: '10%', top: '60%' }} />
+                <div className="moving-part" style={{ left: '40%', top: '80%' }} />
+                <div className="moving-part" style={{ left: '90%', top: '30%' }} />
+            </div>
+            <div className="shadow" />
+
             <header>
-                <h1 className="center-text" style={{ paddingLeft: '115px' }}>Welcome to The Game Website</h1>
-                <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games</p>
+                <h1 className="center-text" style={{ paddingLeft: '115px' }}>Welcome to Celestial Arcade</h1>
+                <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
                 <div className="games-row">
@@ -150,13 +170,11 @@ const Home = () => {
     );
 };
 
-
-
 const App = () => {
     return (
         <Router>
             <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
-            <Routes>
+                <Routes>
                     <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="/Gaming-Website-Project/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
@@ -170,5 +188,6 @@ const App = () => {
         </Router>
     );
 };
+
 
 export default App;
