@@ -160,13 +160,13 @@ const Home = () => {
                         title="Checkers"
                         description="Classic strategy board game for all ages!"
                         imageUrl="https://static7.depositphotos.com/1263295/750/i/450/depositphotos_7505639-stock-photo-checkers.jpg"
-                        imageStyle={{ width: '300px', height: '300px' }}
+                        imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
                     />
                     <FeaturedGame
                         title="Tic Tac Toe"
                         description="The timeless game of Xs and Os."
                         imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
-                        imageStyle={{ width: '300px', height: '300px' }}
+                        imageStyle={{ width: '300px', height: '300px', border: '20px solid white' }}
                     />
                 </div>
                 <div className="games-row">
