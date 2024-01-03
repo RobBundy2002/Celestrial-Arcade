@@ -126,8 +126,8 @@ const BreakoutGame = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         // Draw the "Game Over" text
-        context.fillStyle = '#000';
-        context.font = 'bold 50px Helvetica'; // Adjust font size and weight
+        context.fillStyle = 'white';
+        context.font = 'bold 50px Helvetica';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
 

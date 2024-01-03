@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/Gaming-Website-Project/static/css/main.17bfa86a.css",
-    "main.js": "/Gaming-Website-Project/static/js/main.eca2800c.js",
+    "main.js": "/Gaming-Website-Project/static/js/main.ba801f5d.js",
     "static/media/Color logo - no background.png": "/Gaming-Website-Project/static/media/Color logo - no background.a878472ecb296c9c01d3.png",
+    "static/media/Paper.png": "/Gaming-Website-Project/static/media/Paper.7301b4700afe1b9d1ef4.png",
+    "static/media/Scissors.jpg": "/Gaming-Website-Project/static/media/Scissors.8a54c6ed3d6dbd19bb92.jpg",
     "index.html": "/Gaming-Website-Project/index.html",
     "main.17bfa86a.css.map": "/Gaming-Website-Project/static/css/main.17bfa86a.css.map",
-    "main.eca2800c.js.map": "/Gaming-Website-Project/static/js/main.eca2800c.js.map"
+    "main.ba801f5d.js.map": "/Gaming-Website-Project/static/js/main.ba801f5d.js.map"
   },
   "entrypoints": [
     "static/css/main.17bfa86a.css",
-    "static/js/main.eca2800c.js"
+    "static/js/main.ba801f5d.js"
   ]
 }

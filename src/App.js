@@ -9,7 +9,7 @@ import './App.css';
 import './Home.css';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import LogoImage from './Color logo - no background.png';
+import LogoImage from './Logo.png';
 
 
 const LabelBottomNavigation = () => {
