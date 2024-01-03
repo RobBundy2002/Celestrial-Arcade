@@ -10,7 +10,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
-
+import HangmanGame from "./Hangman";
 
 
 const LabelBottomNavigation = () => {
@@ -103,6 +103,17 @@ const LabelBottomNavigation = () => {
                 value="memory-match"
                 component={Link}
                 to="/memory-match"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
+            <BottomNavigationAction
+                label="Hangman"
+                value="hangman"
+                component={Link}
+                to="/hangman"
                 sx={{
                     color: 'white',
                     fontSize: '3rem',
@@ -208,6 +219,7 @@ const App = () => {
                     <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
                     <Route path="/rock-paper-scissors/*" element={<RockPaperScissorsGame />} />
                     <Route path="/memory-match*" element={<MemoryMatch />} />
+                    <Route path="/hangman*" element = {<HangmanGame/>} />
                 </Routes>
                 <LabelBottomNavigation />
             </div>

@@ -95,7 +95,7 @@ const TicTacToeGame = () => {
             </h1>
             {renderBoard()}
             {resultJsx && resultJsx}
-            <button style={{ marginTop: '20px', marginLeft: '720px', padding: '8px 16px', fontSize: '16px', cursor: 'pointer' }} onClick={restartGame}>
+            <button style={{ marginTop: '20px', marginLeft: '704px', padding: '8px 16px', fontSize: '16px', cursor: 'pointer' }} onClick={restartGame}>
                 Restart Game
             </button>
         </div>
