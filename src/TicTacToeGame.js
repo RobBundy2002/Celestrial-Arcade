@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './TicTacToeGame.css';
 
 const TicTacToeGame = () => {
-    const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
+    const initialBoard = Array(9).fill('');
+    const [board, setBoard] = useState(initialBoard);
     const [currentPlayer, setCurrentPlayer] = useState('X');
     const [gameActive, setGameActive] = useState(true);
     const [resultJsx, setResultJsx] = useState(null);
@@ -40,6 +41,14 @@ const TicTacToeGame = () => {
         setBoard(newBoard);
     };
 
+    // Function to restart the game
+    const restartGame = () => {
+        setBoard(initialBoard);
+        setCurrentPlayer('X');
+        setGameActive(true);
+        setResultJsx(null);
+    };
+
     useEffect(() => {
         const winner = checkWinner();
         if (winner) {
@@ -49,14 +58,14 @@ const TicTacToeGame = () => {
                 // It's a tie
                 setResultJsx(
                     <div style={{ marginTop: '20px', marginLeft: '720px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
-                    <p>It's a tie!</p>
+                        <p>It's a tie!</p>
                     </div>
                 );
             } else {
                 // Player X or O wins
                 setResultJsx(
                     <div style={{ marginTop: '20px', marginLeft: '690px', color: 'white', fontSize: '24px', fontWeight: 'bold' }}>
-                    <p>Player {winner} wins!</p>
+                        <p>Player {winner} wins!</p>
                     </div>
                 );
             }
@@ -82,13 +91,15 @@ const TicTacToeGame = () => {
     return (
         <div>
             <h1 style={{ marginTop: '70px', marginLeft: '140px', color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
-                TicTacToe
+                Tic Tac Toe
             </h1>
             {renderBoard()}
             {resultJsx && resultJsx}
+            <button style={{ marginTop: '20px', marginLeft: '720px', padding: '8px 16px', fontSize: '16px', cursor: 'pointer' }} onClick={restartGame}>
+                Restart Game
+            </button>
         </div>
     );
 };
-
 
 export default TicTacToeGame;
