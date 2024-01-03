@@ -4,11 +4,13 @@ import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
 import FlappyBirdGame from './FlappyBirdGame';
 import BreakoutGame from "./BreakoutGame";
+import RockPaperScissorsGame from "./RockPaperScissorsGame";
 import './App.css';
 import './Home.css';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Color logo - no background.png';
+
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -89,6 +91,17 @@ const LabelBottomNavigation = () => {
                 value="break-out-game"
                 component={Link}
                 to="/break-out-game"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
+            <BottomNavigationAction
+                label="Rock Paper Scissors"
+                value="rock-paper-scissors"
+                component={Link}
+                to="/rock-paper-scissors"
                 sx={{
                     color: 'white',
                     fontSize: '3rem',
@@ -187,6 +200,7 @@ const App = () => {
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
                     <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
                     <Route path="/break-out-game/*" element={<BreakoutGame />} />
+                    <Route path="/rock-paper-scissors/*" element={<RockPaperScissorsGame />} />
                 </Routes>
                 <LabelBottomNavigation />
             </div>
