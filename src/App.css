@@ -11,7 +11,18 @@ body {
     animation: dynamicBackground 15s infinite alternate;
     text-shadow: 4px 4px 4px rgba(128, 0, 128, 0.8);
 }
-
+body.home-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1550px;
+    height: 1300px;
+    background-image: url('Space-Battle.jpg');
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    opacity: 0.3;
+}
 @keyframes dynamicBackground {
     0% {
         background-position: 0 0;

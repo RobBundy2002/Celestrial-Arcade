@@ -11,7 +11,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
 import HangmanGame from "./Hangman";
-
+import About from "./About";
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -120,6 +120,17 @@ const LabelBottomNavigation = () => {
                     fontWeight: 'bold',
                 }}
             />
+            <BottomNavigationAction
+                label="About"
+                value="about"
+                component={Link}
+                to="/about"
+                sx={{
+                    color: 'white',
+                    fontSize: '3rem',
+                    fontWeight: 'bold',
+                }}
+            />
         </BottomNavigation>
     );
 };
@@ -142,7 +153,6 @@ const FeaturedGame = ({ title, description, imageUrl }) => {
 };
 
 const Home = () => {
-
     //Potential Error Fix
     useEffect(() => {
         // Add a class to the body element when the Home component mounts
@@ -153,6 +163,7 @@ const Home = () => {
             document.body.classList.remove('home-page');
         };
     }, []);
+
 
     return (
         <div className="home-container">
@@ -173,7 +184,7 @@ const Home = () => {
                 <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
-                <div className="games-row">
+                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
                         title="Checkers"
                         description="Classic strategy board game for all ages!"
@@ -187,7 +198,7 @@ const Home = () => {
                         imageStyle={{ width: '300px', height: '300px', border: '20px solid white' }}
                     />
                 </div>
-                <div className="games-row">
+                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
                         title="Memory Match"
                         description="Match the cards in as few moves as possible"
@@ -220,6 +231,7 @@ const App = () => {
                     <Route path="/rock-paper-scissors/*" element={<RockPaperScissorsGame />} />
                     <Route path="/memory-match*" element={<MemoryMatch />} />
                     <Route path="/hangman*" element = {<HangmanGame/>} />
+                    <Route path="/about*" element = {<About/>} />
                 </Routes>
                 <LabelBottomNavigation />
             </div>

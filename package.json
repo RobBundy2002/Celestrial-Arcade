@@ -24,7 +24,8 @@
     "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
     "sudoku": "^0.0.3",
-    "sudoku-umd": "^1.0.1"
+    "sudoku-umd": "^1.0.1",
+    "three": "^0.160.0"
   },
   "browserslist": {
     "production": [

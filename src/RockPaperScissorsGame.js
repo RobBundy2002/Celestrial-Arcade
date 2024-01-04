@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import rockImage from './Rock2.JPG';
+import rockImage from './Rock2.jpg';
 import paperImage from './Paper2.JPG';
 import scissorsImage from './Scissor2.jpg';
 import './RockPaperScissors.css';
