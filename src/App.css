@@ -19,7 +19,7 @@ body.home-page::after {
     width: 1550px;
     height: 1310px;
     background-image: url('Space-Battle.jpg');
-    opacity: 0.3;
+    opacity: 0.14;
 }
 @keyframes dynamicBackground {
     0% {
