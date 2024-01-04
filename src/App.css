@@ -17,10 +17,8 @@ body.home-page::after {
     top: 0;
     left: 0;
     width: 1550px;
-    height: 1300px;
+    height: 1310px;
     background-image: url('Space-Battle.jpg');
-    /*background-size: cover;*/
-    /*background-position: center;*/
     opacity: 0.3;
 }
 @keyframes dynamicBackground {
@@ -66,7 +64,7 @@ h1 {
 }
 
 .featured-game-box.zoomed {
-    transform: scale(1.2); /* Adjust the scale factor for zoom effect */
+    transform: scale(1.2);
 }
 
 .games-row {
@@ -83,7 +81,7 @@ h1 {
 .featured-game-image {
     width: 400px;
     height: 400px;
-    border: 5px solid #800080CC;
+    border: 5px solid black;
 }
 
 .center-text {

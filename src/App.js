@@ -12,6 +12,7 @@ import LogoImage from './Logo.png';
 import MemoryMatch from "./MemoryMatch";
 import HangmanGame from "./Hangman";
 import About from "./About";
+import Astronaut from "./Astronaut";
 
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -168,6 +169,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="background">
+                <Astronaut />
                 <div className="moving-part" style={{ left: '20%', top: '20%' }} />
                 <div className="moving-part" style={{ left: '50%', top: '70%' }} />
                 <div className="moving-part" style={{ left: '80%', top: '50%' }} />
@@ -180,8 +182,8 @@ const Home = () => {
             <div className="shadow" />
 
             <header>
-                <h1 className="center-text" style={{ paddingLeft: '115px' }}>Welcome to Celestial Arcade</h1>
-                <p className="center-text" style={{ paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
+                <h1 className="center-text" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Welcome to Celestial Arcade</h1>
+                <p className="center-text" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
                 <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
