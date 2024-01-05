@@ -14,6 +14,7 @@ import HangmanGame from "./Hangman";
 import About from "./About";
 import Astronaut from "./Astronaut";
 import Earth from "./Earth"
+import Background from "./Background";
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
@@ -223,6 +224,8 @@ const App = () => {
     return (
         <Router>
             <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
+                <div className="background"></div>
+                <Background />
                 <Earth />
                 <Routes>
                     <Route path="/" element={<Navigate to="/home" />} />

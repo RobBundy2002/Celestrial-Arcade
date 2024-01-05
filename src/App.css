@@ -11,15 +11,17 @@ body {
     animation: dynamicBackground 15s infinite alternate;
     text-shadow: 4px 4px 4px rgba(128, 0, 128, 0.8);
 }
+
 body.home-page::after {
     content: '';
-    position: absolute;
+    position: fixed;
     margin-top: 0;
     left: 0;
     width: 1550px;
     height: 1310px;
     background-image: url('Space-Battle.jpg');
     opacity: 0.14;
+    z-index: 999;
 }
 @keyframes dynamicBackground {
     0% {
@@ -87,8 +89,9 @@ h1 {
 
 .center-text {
     text-align: center;
+    margin-top: 100px;
 }
 
 body.home-page {
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }

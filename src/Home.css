@@ -4,7 +4,7 @@ body {
 }
 
 .background {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 1400px;
@@ -12,6 +12,7 @@ body {
     z-index: -1;
     margin-top: 10px;
 }
+
 @keyframes moveBackground1 {
     0%, 100% {
         transform: translateY(400px) translateX(0);

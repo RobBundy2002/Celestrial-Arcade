@@ -1,0 +1,11 @@
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Space-Battle.jpg');
+    background-size: cover;
+    opacity: 0.14;
+    z-index: -1;
+}
