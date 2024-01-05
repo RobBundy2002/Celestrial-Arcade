@@ -41,7 +41,7 @@ const HangmanGame = () => {
     const checkGameStatus = (updatedGuessedWord) => {
         if (updatedGuessedWord.join('') === selectedWord) {
             setGameStatus('win');
-        } else if (incorrectGuesses >= 6) {
+        } else if (incorrectGuesses >= 5 && updatedGuessedWord.join('') !== selectedWord) {
             setGameStatus('lose');
         }
     };
