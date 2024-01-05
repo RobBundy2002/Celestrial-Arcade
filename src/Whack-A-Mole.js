@@ -41,11 +41,11 @@ const WhackAMole = () => {
 
     return (
         <div className="whack-a-mole-container">
-            <h1 className="title" >
+            <h1 className="title" style={{ textAlign: 'left' }}>
                 Whack A Mole
             </h1>
             <div className="score">Score: {score}</div>
-            <div className="misses">Misses: {misses}</div>
+            <div className="misses" style={{ marginBottom: '10px' }}>Misses: {misses}</div>
             <div className="moles-container">
                 {moles.map((mole) => (
                     <div
@@ -56,6 +56,7 @@ const WhackAMole = () => {
                 ))}
             </div>
         </div>
+
     );
 };
 

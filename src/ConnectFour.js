@@ -75,7 +75,7 @@ const ConnectFour = () => {
 
     return (
         <div className="connect-four">
-            <h1 className="title">Connect Four</h1>
+            <h1 className="title1">Connect Four</h1>
             <div className="turn-indicator">{winner ? `${winner} wins!` : `Turn: ${isRedTurn ? 'Red' : 'Yellow'}`}</div>
             <div className="board">
                 {board.map((row, rowIndex) => (
