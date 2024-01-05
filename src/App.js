@@ -2,19 +2,20 @@ import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import TicTacToePage from './TicTacToePage';
 import RockPaperScissorsGame from "./RockPaperScissorsGame";
+import MemoryMatch from "./MemoryMatch";
+import HangmanGame from "./Hangman";
+import About from "./About";
+import Earth from "./Earth"
+import Background from "./Background";
+import WhackAMole from "./Whack-A-Mole";
+import ConnectFour from "./ConnectFour";
 import './App.css';
 import './Home.css';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoImage from './Logo.png';
-import MemoryMatch from "./MemoryMatch";
-import HangmanGame from "./Hangman";
-import About from "./About";
 import Astronaut from "./Astronaut";
-import Earth from "./Earth"
-import Background from "./Background";
-import WhackAMole from "./Whack-A-Mole";
-import ConnectFour from "./ConnectFour";
+
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
@@ -187,7 +188,6 @@ const Home = () => {
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
                 <div className="games-row" style={{ marginLeft: '22px', position: 'relative', zIndex: '1' }}>
-
                     <FeaturedGame
                         title="Connect 4"
                         description="Be the first to Connect 4 in a Row!"
@@ -254,6 +254,5 @@ const App = () => {
         </Router>
     );
 };
-
 
 export default App;
