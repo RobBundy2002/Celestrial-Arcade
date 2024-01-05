@@ -186,12 +186,19 @@ const Home = () => {
                 <p className="center-text2" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
-                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
+                <div className="games-row" style={{ marginLeft: '22px', position: 'relative', zIndex: '1' }}>
+
                     <FeaturedGame
-                        title="Hangman"
-                        description="Guess the word before the man is hung!"
-                        imageUrl="https://t3.ftcdn.net/jpg/03/63/09/08/360_F_363090811_wNoDTuqgxnVN3ZdWJAH9rkiexDEtMLA9.jpg"
-                        imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
+                        title="Connect 4"
+                        description="Be the first to Connect 4 in a Row!"
+                        imageUrl="https://images.squarespace-cdn.com/content/v1/59ea6080a803bb2f70ecbae5/1531158822177-PA43ZBAYH87N2FB3AR3I/91L30nswRuL._SX425_.jpg"
+                        imageStyle={{ width: '300px', height: '300px' }}
+                    />
+                    <FeaturedGame
+                        title="Tic Tac Toe"
+                        description="The timeless game of Xs and Os."
+                        imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
+                        imageStyle={{ width: '300px', height: '300px', border: '20px solid white' }}
                     />
                     <FeaturedGame
                         title="Whack A Mole"
@@ -205,15 +212,6 @@ const Home = () => {
                         imageUrl="https://static.wixstatic.com/media/315333_bfe759497906487596e93a3cbe87c5a0~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/315333_bfe759497906487596e93a3cbe87c5a0~mv2.jpg"
                         imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
                     />
-
-                </div>
-                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
-                    <FeaturedGame
-                        title="Tic Tac Toe"
-                        description="The timeless game of Xs and Os."
-                        imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
-                        imageStyle={{ width: '300px', height: '300px', border: '20px solid white' }}
-                    />
                     <FeaturedGame
                         title="Memory Match"
                         description="Match the cards in as few moves as possible"
@@ -221,10 +219,10 @@ const Home = () => {
                         imageStyle={{ width: '300px', height: '300px' }}
                     />
                     <FeaturedGame
-                        title="Connect 4"
-                        description="Be the first to Connect 4 in a Row!"
-                        imageUrl="https://images.squarespace-cdn.com/content/v1/59ea6080a803bb2f70ecbae5/1531158822177-PA43ZBAYH87N2FB3AR3I/91L30nswRuL._SX425_.jpg"
-                        imageStyle={{ width: '300px', height: '300px' }}
+                        title="Hangman"
+                        description="Guess the word before the man is hung!"
+                        imageUrl="https://t3.ftcdn.net/jpg/03/63/09/08/360_F_363090811_wNoDTuqgxnVN3ZdWJAH9rkiexDEtMLA9.jpg"
+                        imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
                     />
                 </div>
             </section>

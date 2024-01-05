@@ -98,5 +98,5 @@ h1 {
 }
 
 body.home-page {
-    overflow-y: auto;
+    overflow-y: hidden;
 }
