@@ -91,6 +91,10 @@ h1 {
     text-align: center;
     margin-top: 100px;
 }
+.center-text2 {
+    text-align: center;
+    margin-top: 0;
+}
 
 body.home-page {
     overflow-y: auto;

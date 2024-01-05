@@ -90,7 +90,7 @@ const TicTacToeGame = () => {
     // Initialize the game board
     return (
         <div>
-            <h1 style={{ marginTop: '70px', marginLeft: '140px', color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
+            <h1 style={{ marginTop: '100px', marginLeft: '140px', color: 'white', fontSize: '36px', fontWeight: 'bold' }}>
                 Tic Tac Toe
             </h1>
             {renderBoard()}

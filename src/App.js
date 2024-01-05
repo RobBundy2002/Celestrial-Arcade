@@ -184,7 +184,7 @@ const Home = () => {
 
             <header>
                 <h1 className="center-text" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Welcome to Celestial Arcade</h1>
-                <p className="center-text" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
+                <p className="center-text2" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
                 <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
