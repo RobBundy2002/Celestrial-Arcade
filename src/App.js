@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-import CheckersBoard from './CheckersBoard';
 import TicTacToePage from './TicTacToePage';
-import FlappyBirdGame from './FlappyBirdGame';
 import RockPaperScissorsGame from "./RockPaperScissorsGame";
 import './App.css';
 import './Home.css';
@@ -15,6 +13,8 @@ import About from "./About";
 import Astronaut from "./Astronaut";
 import Earth from "./Earth"
 import Background from "./Background";
+import WhackAMole from "./Whack-A-Mole";
+import ConnectFour from "./ConnectFour";
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
@@ -57,10 +57,10 @@ const LabelBottomNavigation = () => {
                 }}
             />
             <BottomNavigationAction
-                label="Checkers"
-                value="checkers"
+                label="Connect Four"
+                value="connect-four"
                 component={Link}
-                to="/checkers"
+                to="/connect-four"
                 sx={{
                     color: 'white',
                     fontSize: '3 rem',
@@ -79,10 +79,10 @@ const LabelBottomNavigation = () => {
                 }}
             />
             <BottomNavigationAction
-                label="Flappy Bird"
-                value="flappy-bird"
+                label="Whack A Mole"
+                value="whack-a-mole"
                 component={Link}
-                to="/flappy-bird"
+                to="/whack-a-mole"
                 sx={{
                     color: 'white',
                     fontSize: '3rem',
@@ -188,19 +188,32 @@ const Home = () => {
             <section className="featured-games" style={{ paddingLeft: '115px' }}>
                 <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
-                        title="Checkers"
-                        description="Classic strategy board game for all ages!"
-                        imageUrl="https://static7.depositphotos.com/1263295/750/i/450/depositphotos_7505639-stock-photo-checkers.jpg"
+                        title="Hangman"
+                        description="Guess the word before the man is hung!"
+                        imageUrl="https://t3.ftcdn.net/jpg/03/63/09/08/360_F_363090811_wNoDTuqgxnVN3ZdWJAH9rkiexDEtMLA9.jpg"
                         imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
                     />
+                    <FeaturedGame
+                        title="Whack A Mole"
+                        description="WHACK THE MOLES- Enough Said"
+                        imageUrl="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71QD8CMfnaL._AC_UF894,1000_QL80_.jpg"
+                        imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
+                    />
+                    <FeaturedGame
+                        title="Rock Paper Scissors"
+                        description="Outwit your friends in this classic game of 3's"
+                        imageUrl="https://static.wixstatic.com/media/315333_bfe759497906487596e93a3cbe87c5a0~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/315333_bfe759497906487596e93a3cbe87c5a0~mv2.jpg"
+                        imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
+                    />
+
+                </div>
+                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
                         title="Tic Tac Toe"
                         description="The timeless game of Xs and Os."
                         imageUrl="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tic_Tac_Toe.jpg"
                         imageStyle={{ width: '300px', height: '300px', border: '20px solid white' }}
                     />
-                </div>
-                <div className="games-row" style={{ position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
                         title="Memory Match"
                         description="Match the cards in as few moves as possible"
@@ -208,9 +221,9 @@ const Home = () => {
                         imageStyle={{ width: '300px', height: '300px' }}
                     />
                     <FeaturedGame
-                        title="Flappy Bird"
-                        description="How far can you fly?"
-                        imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYCLX-iL7a7cYcTFmPGPTRjwkz_D6un53PBqVNgtRCAA&s"
+                        title="Connect 4"
+                        description="Be the first to Connect 4 in a Row!"
+                        imageUrl="https://images.squarespace-cdn.com/content/v1/59ea6080a803bb2f70ecbae5/1531158822177-PA43ZBAYH87N2FB3AR3I/91L30nswRuL._SX425_.jpg"
                         imageStyle={{ width: '300px', height: '300px' }}
                     />
                 </div>
@@ -230,9 +243,9 @@ const App = () => {
                     <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="/Gaming-Website-Project/" element={<Navigate to="/home" />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/checkers/*" element={<CheckersBoard />} />
+                    <Route path="/connect-four/*" element={<ConnectFour/>} />
                     <Route path="/tic-tac-toe/*" element={<TicTacToePage />} />
-                    <Route path="/flappy-bird/*" element={<FlappyBirdGame />} />
+                    <Route path="/whack-a-mole/*" element={<WhackAMole />} />
                     <Route path="/rock-paper-scissors/*" element={<RockPaperScissorsGame />} />
                     <Route path="/memory-match*" element={<MemoryMatch />} />
                     <Route path="/hangman*" element = {<HangmanGame/>} />
