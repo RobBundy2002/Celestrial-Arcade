@@ -1,15 +1,14 @@
-
 .checkers-piece {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
-}
-
-.checkers-piece.black {
-    background-color: #000;
-}
-
-.checkers-piece.white {
     background-color: #fff;
-    border: 1px solid #000;
+}
+
+.checkers-piece.r {
+    background-color: red;
+}
+
+.checkers-piece.b {
+    background-color: black;
 }

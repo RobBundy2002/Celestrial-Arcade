@@ -13,7 +13,7 @@ import MemoryMatch from "./MemoryMatch";
 import HangmanGame from "./Hangman";
 import About from "./About";
 import Astronaut from "./Astronaut";
-
+import Earth from "./Earth"
 const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
 
@@ -169,7 +169,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="background">
-                <Astronaut />
+                {/*<Astronaut />*/}
                 <div className="moving-part" style={{ left: '20%', top: '20%' }} />
                 <div className="moving-part" style={{ left: '50%', top: '70%' }} />
                 <div className="moving-part" style={{ left: '80%', top: '50%' }} />
@@ -223,6 +223,7 @@ const App = () => {
     return (
         <Router>
             <div className="App" style={{ width: '1400px', minHeight: '100vh', marginBottom: '20px', display: 'flex', flexDirection: 'column', }}>
+                <Earth />
                 <Routes>
                     <Route path="/" element={<Navigate to="/home" />} />
                     <Route path="/Gaming-Website-Project/" element={<Navigate to="/home" />} />

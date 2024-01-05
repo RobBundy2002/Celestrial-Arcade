@@ -14,7 +14,7 @@ body {
 body.home-page::after {
     content: '';
     position: absolute;
-    top: 0;
+    margin-top: 0;
     left: 0;
     width: 1550px;
     height: 1310px;
@@ -51,6 +51,7 @@ h1 {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin-top: 0;
 }
 
 .featured-games {
