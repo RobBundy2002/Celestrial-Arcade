@@ -186,7 +186,7 @@ const Home = () => {
                 <h1 className="center-text" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Welcome to Celestial Arcade</h1>
                 <p className="center-text2" style={{ position: 'relative', zIndex: '1', paddingLeft: '115px' }}>Explore and enjoy a variety of exciting games! </p>
             </header>
-            <section className="featured-games" style={{ paddingLeft: '115px' }}>
+            <section className="featured-games" style={{ paddingLeft: '15px' }}>
                 <div className="games-row" style={{ marginLeft: '22px', position: 'relative', zIndex: '1' }}>
                     <FeaturedGame
                         title="Connect 4"
@@ -203,7 +203,7 @@ const Home = () => {
                     <FeaturedGame
                         title="Whack A Mole"
                         description="WHACK THE MOLES- Enough Said"
-                        imageUrl="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71QD8CMfnaL._AC_UF894,1000_QL80_.jpg"
+                        imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYXzbOv_5zy2Tuxe0wtAOptAQNt2tKnuMlhRPnOmNUCg&s"
                         imageStyle={{ width: '300px', height: '300px', border: '2px solid white' }}
                     />
                     <FeaturedGame
@@ -215,7 +215,7 @@ const Home = () => {
                     <FeaturedGame
                         title="Memory Match"
                         description="Match the cards in as few moves as possible"
-                        imageUrl="https://media.licdn.com/dms/image/D4E2DAQEMyAHAPNLHPw/profile-treasury-image-shrink_1920_1920/0/1704264625588?e=1704870000&v=beta&t=7Oq7yxOjqrXr_3XPKrr20ChDI0BdWnU0sygDVNi2gBI"
+                        imageUrl="https://img.freepik.com/free-vector/animal-memory-card-game_1308-113086.jpg?size=626&ext=jpg"
                         imageStyle={{ width: '300px', height: '300px' }}
                     />
                     <FeaturedGame
