@@ -1,17 +1,12 @@
 # Gaming Website Project
 
-Welcome to the Gaming Website Project! This website features several classic games, including Tic-Tac-Toe, Checkers, Flappy Bird, Rock Paper Scissors, and Memory Match. Have fun playing and exploring the various games.
+Welcome to the Gaming Website Project! This website features several classic games, including Tic-Tac-Toe, Rock Paper Scissors, Memory Match and more. Have fun playing and exploring the various games.
 
 ## Games Included
 
 ### Tic-Tac-Toe
 - Classic Tic-Tac-Toe game for two players.
 
-### Checkers
-- Traditional Checkers game with two-player functionality.
-
-### Flappy Bird
-- Flappy Bird game implemented in React.
 
 ### Rock Paper Scissors
 - Traditional Rock Paper Scissors you can play against a computer.
